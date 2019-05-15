@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600);
 body {
-  background-color: #f9ccb4;
+  background-color: rgb(252, 165, 241,0.51);
   font-size: 18px;
 }
 
@@ -26,11 +26,11 @@ body {
   float: left;
   position: relative;
 }
+
 .container .login-form h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.667em;
   font-weight: 700;
-  text-transform: uppercase;
   margin: 0 0 40px 0;
 }
 .container .login-form input {
@@ -114,15 +114,14 @@ body {
   width: calc(100% - 370px);
   height: 600px;
   display: inline-block;
-  background-image: url("http://i66.tinypic.com/316xb7t.png");
+  background-image: url("../picture/login1.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 }
 .container .img-content h1 {
   text-align: center;
   color: #fff;
-  text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   margin-top: 95px;
 }
