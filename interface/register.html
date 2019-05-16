@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Đăng Ký</title>  
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body>
+    
+        <div ng-app="validationApp" ng-controller="registerController" >
+            <div class="container">
+                <div class="register-form">
+                    <h1>Đăng Ký</h1>
+            
+                    <form name="registerForm" ng-submit="submitForm1()" novalidate>
+                        <div ng-class="{ 'has-error' : registerForm.name.$invalid && !registerForm.name.$pristine }">
+                            <input type="text" name="username" placeholder="Tên Đăng Nhập Nè" minlength="3" ng-model="user.register_username" required/>
+                            <p class="error-text" ng-show="registerForm.username.$invalid && registerForm.name.$pristine">Tên đăng nhập đang bị trống.</p>
+                            <p class="help-block error-text" ng-if="registerForm.username.$error.minlength">Tên đăng nhập quá ngắn.</p>
+                        </div>
+                        <input type="password" minlength="6" name="password" ng-model="user.register_password" placeholder="Mật Khẩu Nè" required/>
+                            <p class="help-block error-text" ng-if="registerForm.password.$error.minlength">Mật khẩu quá ngắn.</p>
+                        <input type="email" name="email" ng-model="user.register_email" placeholder="Email Nè"required/>
+                            <p class="help-block error-text" ng-if="registerForm.email.$error.email">Email không hợp lệ </p>
+                        <input type="phone" name="phone" ng-model="user.register_phone" maxlength="10" ng-pattern="[0-9]" placeholder="Số Điện Thoại Nè" required />  <!-- Chưa bắt lỗi sdt -->
+                            <!-- <p class="help-block error-text" ng-if="registerForm.phone.$error.phone">Số Điện Thoại không hợp lệ</p> -->
+                        
+                            <button class="register-btn" ng-disabled="registerForm.$invalid">Đăng Ký</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    <script src="../js/register.js"></script>
+    </body>
+
+</html>
+
+
+
