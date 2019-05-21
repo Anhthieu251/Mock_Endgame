@@ -10,19 +10,48 @@
 
 <body>
 
+<!-- <div ng-app="validationApp" ng-controller="mainController" >
+  <div class="container">
+    <div class="login-form">
+      <h1>Đăng nhập</h1>
+      <form name="loginForm" ng-submit="submitForm()" novalidate>
+        <div ng-class="{ 'has-error' : loginForm.name.$invalid && !loginForm.name.$pristine }">
+          <input  id="email_field"  type="text" name="username" placeholder="Tên Đăng Nhập" minlength="3" ng-model="user.username" required/>
+          <p class="error-text" ng-if="loginForm.username.$invalid && loginForm.name.$pristine">You name is requiredbbb.</p>
+          <p class="help-block error-text" ng-if="loginForm.username.$error.minlength">Tên đăng nhập quá ngắn.</p>
+        </div>
+        <input id="password_field" type="password" minlength="6" name="password" ng-model="user.password" placeholder="Mật Khẩu" required/>
+         <p class="help-block error-text" ng-if="loginForm.password.$minlength">Mật khẩu quá ngắn.</p>
+        <button  class="login-btn" ng-disabled="loginForm.$invalid">Đăng Nhập</button>
+      </form>
+
+      <ul>
+        <li><a href="">Quyên Mật Khẩu</a></li>
+        <li><a href="../interface/register.html">Đăng Kí</a></li>
+      </ul>
+    </div>
+    <div class="img-content">
+      <h1> The first wealth is health.</h1>
+      <p>Just because you’re not sick doesn’t mean you’re healthy.</p>
+    </div>
+  </div>
+</div> -->
+
+
+
 <div ng-app="validationApp" ng-controller="mainController" >
   <div class="container">
     <div class="login-form">
       <h1>Đăng nhập</h1>
       <form name="loginForm" ng-submit="submitForm()" novalidate>
         <div ng-class="{ 'has-error' : loginForm.name.$invalid && !loginForm.name.$pristine }">
-          <input type="text" name="username" placeholder="Tên Đăng Nhập" minlength="3" ng-model="user.username" required/>
+          <input  id="email_field"  type="text" name="username" placeholder="Tên Đăng Nhập" minlength="3" ng-model="user.username" required/>
           <p class="error-text" ng-if="loginForm.username.$invalid && loginForm.name.$pristine">You name is requiredbbb.</p>
           <p class="help-block error-text" ng-if="loginForm.username.$error.minlength">Tên đăng nhập quá ngắn.</p>
         </div>
-        <input type="password" minlength="6" name="password" ng-model="user.password" placeholder="Mật Khẩu" required/>
+        <input id="password_field" type="password" minlength="6" name="password" ng-model="user.password" placeholder="Mật Khẩu" required/>
          <p class="help-block error-text" ng-if="loginForm.password.$minlength">Mật khẩu quá ngắn.</p>
-        <button class="login-btn" ng-disabled="loginForm.$invalid">Đăng Nhập</button>
+        <button  onclick="login()" class="login-btn" ng-disabled="loginForm.$invalid">Đăng Nhập</button>
       </form>
 
       <ul>
@@ -36,6 +65,49 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+      <!-- <div id="login_div" class="main-div">
+        <h3>Firebase Web login Example</h3>
+        <input type="email" placeholder="Email..." id="email_field" />
+        <input type="password" placeholder="Password..." id="password_field" />
+
+        <button onclick="login()">Login to Account</button>
+      </div>
+
+      <div id="user_div" class="loggedin-div">
+        <h3>Welcome User</h3>
+        <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+        <button onclick="logout()">Logout</button>
+      </div> -->
+
+
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBGdT-EETtewn4ng-SojYCs8SH5oOiJiCk",
+    authDomain: "web-doctor-c3e36.firebaseapp.com",
+    databaseURL: "https://web-doctor-c3e36.firebaseio.com",
+    projectId: "web-doctor-c3e36",
+    storageBucket: "web-doctor-c3e36.appspot.com",
+    messagingSenderId: "1035233431360",
+    appId: "1:1035233431360:web:ba760aec9e2990ca"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+</script>
+  
     <script  src="../js/login.js"></script>
 </body>
 
