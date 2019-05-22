@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-	<html lang="zxx" class="no-js">
-	<head>
-		
+<html ng-app="app">
+
+ <head>
+
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="shortcut icon" href="../picture/fav">
 		<meta name="author" content="colorlib">
@@ -11,6 +12,8 @@
 		<title>Home</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css" />
 			<!--
 			CSS
 			============================================= -->
@@ -24,10 +27,10 @@
 			<link rel="stylesheet" href="../css/owl.carousel.css">			
 			<link rel="stylesheet" href="../css/jquery-ui.css">			
 			<link rel="stylesheet" href="../css/main.css">
-		</head>
-		<body>
-			<div ng-app="HomePage" ng-controller="HomePageController" >	
-		  <header id="header">
+ </head>
+ <body>
+	 
+	  <header id="header">
 	  		<div class="header-top">
 	  			<div class="container">
 			  		<div class="row align-items-center">
@@ -37,8 +40,8 @@
 			  			</div>
 			  			<div  class="col-lg-6 col-sm-6 col-8 header-top-right">
 								
-							<!-- <a id="btn_DangNhap_home" href="login.html" class="primary-btn text-uppercase">Đăng Nhập</a>
-							<a id="btn_DangKy_home" href="register.html" class="primary-btn text-uppercase">Đăng Ký</a> -->
+							<a id="btn_DangNhap_home" href="login.html" class="primary-btn text-uppercase">Đăng Nhập</a>
+							<a id="btn_DangKy_home" href="register.html" class="primary-btn text-uppercase">Đăng Ký</a>
 							<a id="btn_DangXuat_home"	href="login.html" class="primary-btn text-uppercase">Đăng Xuất</a>
 			  			</div>
 			  		</div>			  					
@@ -101,26 +104,31 @@
 								</li>																
 							</ul>
 						</div>
-						<div class="col-lg-6 col-md-6 appointment-right pt-60 pb-60">
-							<form class="form-wrap" action="#">
+						<div ng-controller="addContactCtrl" class="col-lg-6 col-md-6 appointment-right pt-60 pb-60">
+							<!--  -->
+							<form ng-submit="add()" class="form-wrap" action="#">
 								<h3 class="pb-20 text-center mb-30">Đặt Lịch Hẹn Khám</h3>		
-								<input type="text" class="form-control" name="name" placeholder="Họ và Tên" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Patient Name'" >
-								<input type="text" class="form-control" name="phone" placeholder="Số Điện Thoại " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone'" >
-								<input type="email" class="form-control" name="email" placeholder="Địa Chỉ Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" >
-								<input id="datepicker1" name="dop" class="dates form-control"  placeholder="Ngày Sinh" type="text">   
+								<input ng-model="formData.name" type="text" class="form-control" name="name" placeholder="Họ và Tên" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Patient Name'" >
+								<input ng-model="formData.phone" type="text" class="form-control" name="phone" placeholder="Số Điện Thoại " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone'" >
+								<input ng-model="formData.email" type="email" class="form-control" name="email" placeholder="Địa Chỉ Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" >
+								<input ng-model="formData.birth" id="datepicker1" name="dop" class="dates form-control"  placeholder="Ngày Sinh" type="text">   
 								<div class="form-select" id="service-select">
-									<select>
+								<input ng-model="formData.sex" type="text" class="form-control" placeholder="Giới tính" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Sex'" >
+							
+									<!-- <select ng-model="formData.sex" >
 										<option data-display="">Giới Tính</option>
 										<option value="1">Nam</option>
 										<option value="2">Nữ</option>
 										<option value="3">GLBT</option>
-							
-									</select>
+		
+									</select> -->
 								</div>	
-								<input id="datepicker2" class="dates form-control"  placeholder="Ngày Hẹn Khám" type="text">  
-								<textarea name="messege" class="" rows="5" placeholder="Ghi Chú" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'"></textarea> 
-								<button class="primary-btn text-uppercase">Xác Nhận</button>
+								<input ng-model="formData.lichhen" id="datepicker2" class="dates form-control"  placeholder="Ngày Hẹn Khám" type="text">  
+								<textarea ng-model="formData.ghichu" name="messege" class="" rows="5" placeholder="Ghi Chú" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'"></textarea> 
+								<button type="submit" class="primary-btn text-uppercase">Xác Nhận</button>
 							</form>
+							<!--  -->
+									</div>
 						</div>
 					</div>
 				</div>	
@@ -302,6 +310,40 @@
 			</footer>
 			<!-- End footer Area -->
 
+<!-- firebase -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-datatables/0.6.2/angular-datatables.min.js"></script>
+
+
+
+<script>
+
+ var config = {
+			 apiKey: "AIzaSyBGdT-EETtewn4ng-SojYCs8SH5oOiJiCk",
+			 authDomain: "web-doctor-c3e36.firebaseapp.com",
+			 databaseURL: "https://web-doctor-c3e36.firebaseio.com",
+			 projectId: "web-doctor-c3e36",
+			 storageBucket: "web-doctor-c3e36.appspot.com",
+			 messagingSenderId: "1035233431360",
+			 appId: "1:1035233431360:web:ba760aec9e2990ca"
+ };
+
+ firebase.initializeApp(config);
+</script>
+
+<script src="../procesing/app.js"></script>
+<script src="../procesing/controllers.js"></script>
+
+
+<!-- firebase -->
 
 			<script src="../js/vendor/jquery-2.2.4.min.js"></script>
 			<script src="../js/popper.min.js"></script>
@@ -318,6 +360,6 @@
 			<script src="../js/mail-script.js"></script>	
 			<script src="../js/main.js"></script>	
 			<script src="../js/home.js"></script>
-			</div>
-		</body>
-	</html>
+
+ </body>
+ </html>
