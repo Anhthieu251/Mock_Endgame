@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx" class="no-js">
+<html ng-app="app" lang="zxx" class="no-js">
     <head>
         
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -113,46 +113,26 @@
         <div class="row m-t-30">
                         <div class="col-md-12">
                             <!-- DATA TABLE-->
-                            <div class="table-responsive m-b-40">
+                            <div ng-controller="homeCtrl" class="table-responsive m-b-40">
                                 <table class="table table-borderless table-data3">
                                     <thead>
                                         <tr>
-                                            <th>Ngày </th>
+                                            <th>Ngày khám</th>
                                             <th>Tên bệnh nhân </th>
-                                            <th>Bệnh tình </th>
-                                            <th>Đơn thuốc</th>
+                                            <th>Số điện thoại</th>
+                                            <th>Giới tính</th>
                                             <th>Ghi chú thêm </th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>2018-09-29 05:57</td>
-                                            <td>Thiệu</td>
-                                            <td>HIV</td>
-                                            <td>Processed</td>
-                                            <td>Sắp chết</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2018-09-28 01:22</td>
-                                            <td>Mai</td>
-                                            <td>Giang mai</td>
-                                            <td>Processed</td>
-                                            <td>Sắp chết tập 2</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2018-09-27 02:12</td>
-                                            <td>Duy</td>
-                                            <td>Hắc lào</td>
-                                            <td>Denied</td>
-                                            <td>Sắp chết tập 3 </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2018-09-26 23:06</td>
-                                            <td>Khang </td>
-                                            <td>Béo cmn phì </td>
-                                            <td>Denied</td>
-                                            <td>Mếu thể nào ốm được </td>
-                                        </tr>
+                                        <tr ng-repeat="contact in contacts">
+                                           <th>{{contact.lichhen}}</th>
+                                           <th>{{contact.name}}</th>
+                                           <th>{{contact.phone}}</th>
+                                           <th>{{contact.sex}}</th>
+                                           <th>{{contact.ghichu}}</th>
+                                       </tr>
+                                
                                        
                                     </tbody>
                                 </table>
@@ -238,9 +218,40 @@
 			<script src="../js/owl.carousel.min.js"></script>									
 			<script src="../js/mail-script.js"></script>	
 			<script src="../js/main.js"></script>	
-			<script src="../js/home.js"></script>
+            <script src="../js/home.js"></script>
+     
+            
+
+            
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+ <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+ <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/js/jquery.dataTables.min.js"></script>
+ <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-datatables/0.6.2/angular-datatables.min.js"></script>
+ 
+ 
+ 
+ <script>
+ 
+  var config = {
+              apiKey: "AIzaSyBGdT-EETtewn4ng-SojYCs8SH5oOiJiCk",
+              authDomain: "web-doctor-c3e36.firebaseapp.com",
+              databaseURL: "https://web-doctor-c3e36.firebaseio.com",
+              projectId: "web-doctor-c3e36",
+              storageBucket: "web-doctor-c3e36.appspot.com",
+              messagingSenderId: "1035233431360",
+              appId: "1:1035233431360:web:ba760aec9e2990ca"
+  };
+ 
+  firebase.initializeApp(config);
+ </script>
+ <!-- <script src="./homectrl.js"></script> -->
+ <script src="../procesing/app.js"></script>
+ <script src="../procesing/controllers.js"></script>
+ <!-- <script src="../scripts/config.js"></script> -->
+            
     </body>
-
-
-
 </html>
