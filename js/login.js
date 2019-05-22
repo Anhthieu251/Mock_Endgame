@@ -1,7 +1,7 @@
-//create angular app
+//Khởi tạo modul angular app
 var validationApp = angular.module('validationApp', []); 
 
-//create controller
+//Khởi tạo controller
 validationApp.controller('mainController',function($scope){
   $scope.submitForm = function (){
     // check to form is completely valid
@@ -12,7 +12,7 @@ validationApp.controller('mainController',function($scope){
 });
 
 
-
+// Phương thức đăng nhập
 function login(){
 
   var userEmail = document.getElementById("email_field").value;
@@ -21,6 +21,7 @@ function login(){
   firebase.auth().signInWithEmailAndPassword(userEmail, userPass).then(cred => {
     console.log(cred.user);
     location.assign("/interface/home.html");
+    window.alert('Đăng Nhập Thành Công !')
   });
   firebase.auth().signInWithEmailAndPassword(userEmail, userPass)
   .catch(function(error) {
@@ -31,9 +32,9 @@ function login(){
 
     // ...
   });
-
+// Phương thức đăng xuất
+}
+function logout(){
+  firebase.auth().signOut();
 }
 
-// function logout(){
-//   firebase.auth().signOut();
-// }

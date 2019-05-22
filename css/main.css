@@ -2476,8 +2476,17 @@ body.mobile-nav-active #mobile-nav-toggle {
 .banner-area {
   background: url(../picture/hero-bg.jpg) right;
   background-size: cover;
+  
 }
-
+.banner-area_benhnhan {
+  background: url(../picture/hero-bg.jpg) right;
+  background-size: cover;
+  height: 400px;
+  
+}
+.banner-area_benhnhan .overlay-bg {
+  background-color: rgba(0, 0, 0, 0.4);
+}
 .banner-area .overlay-bg {
   background-color: rgba(0, 0, 0, 0.4);
 }
@@ -2491,7 +2500,17 @@ body.mobile-nav-active #mobile-nav-toggle {
 .banner-content {
   text-align: center;
 }
-
+.banner-content_benhnhan {
+  text-align: center;
+  padding-top: 15%;
+}
+.banner-content_benhnhan h1 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1em;
+  margin-top: 10px;
+  color: #fff;
+}
 .banner-content h1 {
   font-size: 48px;
   font-weight: 700;
@@ -4486,3 +4505,69 @@ dl.toggle.time-line:before {
 .footer-text i {
   color: #69be00;
 }
+
+
+/* Start BenhNhanCSS */
+.Benhnhan{
+  height: 1200px;
+}
+.imgcontact{
+position: relative;
+height: 400px;
+width: 400px;
+}
+.imgcontact img{
+  height: 400px;
+  width: 400px;
+}
+.card-body{
+  padding: 80px 0px 80px 0px;
+  margin-top: 50px;
+  
+}
+.col-left{
+  float: left;
+  position: relative;
+}
+.col-right{
+  float: left;
+  position: relative;
+}
+.note{
+  padding: 0 12.5% 0 12.5%;
+}
+.note input{
+height: 200px;
+}
+.button-save{
+  padding: 30px 0 0 0;
+  float: left;
+}
+.button-save button{
+  background-color: #d05715;
+  margin-left: 30px;
+  border: 0;
+  color: #fff;
+  padding: 15px 55px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+.form-group1{
+  width: 75%;
+  float: right
+}
+.form-group2{
+  width: 75%;
+  float: left;
+}
+.button-potision{
+  padding-left: 37%;
+}
+/* End BenhNhanCSS */
