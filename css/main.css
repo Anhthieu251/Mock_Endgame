@@ -4570,4 +4570,29 @@ height: 200px;
 .button-potision{
   padding-left: 37%;
 }
+.form-group3{
+  padding: 40px 10% 0 10%
+}
+
 /* End BenhNhanCSS */
+/* Start Y Ta CSS */
+.buttonclik1{
+  padding: 70px 0 0 40%;
+}
+.buttonclik1 button{
+  margin-left: 40px;
+}
+
+.nurse{
+  margin-top:150px;
+  background-color: darkgrey;
+}
+/* End Y Ta CSS */
+/* Start BacSyCSS */
+.content-text-Yta h1{
+  color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-top: #000;
+  text-align: center;
+}
+/* End BacSyCSS */
