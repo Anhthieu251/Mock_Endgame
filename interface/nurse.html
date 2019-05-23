@@ -16,6 +16,9 @@
             ============================================= -->
             <link href="../css/theme.css" rel="stylesheet" media="all">
 
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+
             <link rel="stylesheet" href="../css/linearicons.css">
             <link rel="stylesheet" href="../css/font-awesome.min.css">
             <link rel="stylesheet" href="../css/bootstrap.css">
@@ -26,6 +29,55 @@
             <link rel="stylesheet" href="../css/owl.carousel.css">          
             <link rel="stylesheet" href="../css/jquery-ui.css">         
             <link rel="stylesheet" href="../css/main.css">
+
+
+
+            <script src="../js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="../js/popper.min.js"></script>
+			<script src="../js/vendor/bootstrap.min.js"></script>			
+ 			<script src="../js/jquery-ui.js"></script>					
+  			<script src="../js/easing.min.js"></script>			
+			<script src="../js/hoverIntent.js"></script>
+			<script src="../js/superfish.min.js"></script>	
+			<script src="../js/jquery.ajaxchimp.min.js"></script>
+			<script src="../js/jquery.magnific-popup.min.js"></script>	
+    		<script src="../js/jquery.tabs.min.js"></script>						
+			<script src="../js/jquery.nice-select.min.js"></script>	
+			<script src="../js/owl.carousel.min.js"></script>									
+			<script src="../js/mail-script.js"></script>	
+			<script src="../js/main.js"></script>	
+            <script src="../js/home.js"></script>
+     
+            
+
+            
+
+ <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+ <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/js/jquery.dataTables.min.js"></script>
+ <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-datatables/0.6.2/angular-datatables.min.js"></script>
+ 
+ 
+ 
+ <script>
+ 
+  var config = {
+              apiKey: "AIzaSyBGdT-EETtewn4ng-SojYCs8SH5oOiJiCk",
+              authDomain: "web-doctor-c3e36.firebaseapp.com",
+              databaseURL: "https://web-doctor-c3e36.firebaseio.com",
+              projectId: "web-doctor-c3e36",
+              storageBucket: "web-doctor-c3e36.appspot.com",
+              messagingSenderId: "1035233431360",
+              appId: "1:1035233431360:web:ba760aec9e2990ca"
+  };
+ 
+  firebase.initializeApp(config);
+ </script>
+<!--  firebase ref  -->
+
+
     </head>
     <body>
             <header id="header">
@@ -110,36 +162,10 @@
                     
                             
         <!-- Start brands Area -->
-        <div class="row m-t-30">
-                        <div class="col-md-12">
-                            <!-- DATA TABLE-->
-                            <div ng-controller="homeCtrl" class="table-responsive m-b-40">
-                                <table class="table table-borderless table-data3">
-                                    <thead>
-                                        <tr>
-                                            <th>Ngày khám</th>
-                                            <th>Tên bệnh nhân </th>
-                                            <th>Số điện thoại</th>
-                                            <th>Giới tính</th>
-                                            <th>Ghi chú thêm </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr ng-repeat="contact in contacts">
-                                           <th>{{contact.lichhen}}</th>
-                                           <th>{{contact.name}}</th>
-                                           <th>{{contact.phone}}</th>
-                                           <th>{{contact.sex}}</th>
-                                           <th>{{contact.ghichu}}</th>
-                                       </tr>
-                                
-                                       
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- END DATA TABLE-->
-                        </div>
-                    </div>
+       
+                            <div ui-view = "FormNurse"></div>
+
+
                 </div>
 
                 <!-- start footer Area -->      
@@ -204,50 +230,7 @@
                     </div>
                 </footer>
                 <!-- End footer Area -->
-            <script src="../js/vendor/jquery-2.2.4.min.js"></script>
-			<script src="../js/popper.min.js"></script>
-			<script src="../js/vendor/bootstrap.min.js"></script>			
- 			<script src="../js/jquery-ui.js"></script>					
-  			<script src="../js/easing.min.js"></script>			
-			<script src="../js/hoverIntent.js"></script>
-			<script src="../js/superfish.min.js"></script>	
-			<script src="../js/jquery.ajaxchimp.min.js"></script>
-			<script src="../js/jquery.magnific-popup.min.js"></script>	
-    		<script src="../js/jquery.tabs.min.js"></script>						
-			<script src="../js/jquery.nice-select.min.js"></script>	
-			<script src="../js/owl.carousel.min.js"></script>									
-			<script src="../js/mail-script.js"></script>	
-			<script src="../js/main.js"></script>	
-            <script src="../js/home.js"></script>
-     
-            
-
-            
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
- <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
- <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
- <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/js/jquery.dataTables.min.js"></script>
- <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-datatables/0.6.2/angular-datatables.min.js"></script>
  
- 
- 
- <script>
- 
-  var config = {
-              apiKey: "AIzaSyBGdT-EETtewn4ng-SojYCs8SH5oOiJiCk",
-              authDomain: "web-doctor-c3e36.firebaseapp.com",
-              databaseURL: "https://web-doctor-c3e36.firebaseio.com",
-              projectId: "web-doctor-c3e36",
-              storageBucket: "web-doctor-c3e36.appspot.com",
-              messagingSenderId: "1035233431360",
-              appId: "1:1035233431360:web:ba760aec9e2990ca"
-  };
- 
-  firebase.initializeApp(config);
- </script>
  <!-- <script src="./homectrl.js"></script> -->
  <script src="../procesing/app.js"></script>
  <script src="../procesing/controllers.js"></script>

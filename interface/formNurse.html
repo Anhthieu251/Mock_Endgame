@@ -1,0 +1,30 @@
+ <div class="row m-t-30">
+                        <div class="col-md-12">
+                            <!-- DATA TABLE-->
+                            <div ng-controller="homeCtrl" class="table-responsive m-b-40">
+                                <table class="table table-borderless table-data3">
+                                    <thead>
+                                        <tr>
+                                            <th>Ngày khám</th>
+                                            <th>Tên bệnh nhân </th>
+                                            <th>Số điện thoại</th>
+                                            <th>Giới tính</th>
+                                            <th>Ghi chú thêm </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="contact in contacts">
+                                           <th>{{contact.lichhen}}</th>
+                                           <th>{{contact.name}}</th>
+                                           <th>{{contact.phone}}</th>
+                                           <th>{{contact.sex}}</th>
+                                           <th>{{contact.ghichu}}</th>
+                                       </tr>
+                                
+                                       
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- END DATA TABLE-->
+                        </div>
+                    </div>

@@ -6,3 +6,5 @@ angular
     .module('app')
     .controller('homeCtrl', homeCtrl)
     .controller('addContactCtrl', addContactCtrl)
+
+    
