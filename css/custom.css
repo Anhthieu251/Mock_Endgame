@@ -2,3 +2,16 @@
     margin-top:150px;
     background-color: darkgrey;
 }
+.row m-t-30 h1{
+    margin-left: 300px; 
+}
+/* form xacnhan */
+.xacnhan{
+    margin-top:150px;
+    margin-left: 300px;
+   margin-right: 300px;
+}
+.xacnhan h1{
+    margin-left: 250px;
+    margin-bottom: 50px;
+}
