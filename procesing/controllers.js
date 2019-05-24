@@ -1,3 +1,4 @@
+// Them
 function addContactCtrl($scope, $state, $firebaseObject) {
 
     let ref = firebase.database().ref('Contacts');

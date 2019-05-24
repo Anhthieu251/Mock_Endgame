@@ -3,9 +3,7 @@
     <head>
         
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="shortcut icon" href="../picture/fav">
-        <meta name="author" content="colorlib">
-        <meta name="description" content="">
+        <meta name="author" content="colorlib">      
         <meta name="keywords" content="">
         <meta charset="UTF-8">
         <title>Y Tá</title>
@@ -31,7 +29,6 @@
             <link rel="stylesheet" href="../css/main.css">
 
 
-
             <script src="../js/vendor/jquery-2.2.4.min.js"></script>
 			<script src="../js/popper.min.js"></script>
 			<script src="../js/vendor/bootstrap.min.js"></script>			
@@ -46,12 +43,10 @@
 			<script src="../js/owl.carousel.min.js"></script>									
 			<script src="../js/mail-script.js"></script>	
 			<script src="../js/main.js"></script>	
-            <script src="../js/home.js"></script>
      
             
 
-            
-
+        
  <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
  <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
  <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
@@ -130,7 +125,7 @@
         </section>
           <!--end banner area-->
          <!-- start banner Area -->
-         <div class="nurse">
+         <div >
              <div class="card-body card-block">
                                     <form action="" method="post" class="">
                                         <div class="form-group">
@@ -143,24 +138,21 @@
                                        
                                         <div class="form-group">
                                             <div class="input-group">
-                                                <div class="input-group-addon">Ngày khám</div>
-                                                <input type="date" id="date" name="date" class="form-control">
+                                                <div class="input-group-addon">Số Điện Thoại</div>
+                                                <input type="tel" id="phone_number" name="phone_number" class="form-control">
                                                 
                                             </div>
                                         </div>
 
                                         
-                                        <div class="buttonclick1">
-                                        
-                                            <button class="btn btn-warning btn-sm">Search</button>
-                                            <button class="btn btn-info btn-sm">Filter</button>
-                                          
+                                        <div class="buttonlick_search">                                       
+                                            <button class="btn btn-warning btn-sm">Search</button>                                                                            
                                         </div>
                                         
                                     </form>
                                 </div>
                     
-                            
+                                
         <!-- Start brands Area -->
        
                             <div ui-view = "FormNurse"></div>

@@ -2502,7 +2502,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 .banner-content_benhnhan {
   text-align: center;
-  padding-top: 15%;
 }
 .banner-content_benhnhan h1 {
   font-size: 48px;
@@ -4521,8 +4520,7 @@ width: 400px;
   width: 400px;
 }
 .card-body{
-  padding: 80px 0px 80px 0px;
-  margin-top: 50px;
+  padding: 60px 60px;
   
 }
 .col-left{
@@ -4582,11 +4580,11 @@ height: 200px;
 .buttonclik1 button{
   margin-left: 40px;
 }
-
-.nurse{
-  margin-top:150px;
-  background-color: darkgrey;
+.buttonlick_search{
+  padding: 0 50%;
 }
+
+
 /* End Y Ta CSS */
 /* Start BacSyCSS */
 .content-text-Yta h1{
