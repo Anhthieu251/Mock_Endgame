@@ -107,6 +107,7 @@
 							<!--  -->
 							<form ng-submit="add()" class="form-wrap" action="#">
 								<h3 class="pb-20 text-center mb-30">Đặt Lịch Hẹn Khám</h3>		
+								<input ng-model="formData.doctor" type="text" class="form-control" name="doctor" placeholder="Chọn bác sĩ để khám" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Doctor Name'" >
 								<input ng-model="formData.name" type="text" class="form-control" name="name" placeholder="Họ và Tên" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Patient Name'" >
 								<input ng-model="formData.phone" type="text" class="form-control" name="phone" placeholder="Số Điện Thoại " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone'" >
 								<input ng-model="formData.email" type="email" class="form-control" name="email" placeholder="Địa Chỉ Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" >
@@ -119,7 +120,6 @@
 										<option value="1">Nam</option>
 										<option value="2">Nữ</option>
 										<option value="3">GLBT</option>
-		
 									</select> -->
 								</div>	
 								<input ng-model="formData.lichhen" id="datepicker2" class="dates form-control"  placeholder="Ngày Hẹn Khám" type="text">  

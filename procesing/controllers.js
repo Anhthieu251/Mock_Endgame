@@ -11,14 +11,26 @@ function addContactCtrl($scope, $state, $firebaseObject) {
         });
     }
 };
+ 
+
+
+
+
 
 function homeCtrl($scope, $firebaseObject){
     const ref = firebase.database().ref('Contacts');
     $scope.contacts = $firebaseObject(ref);
 }
+// function doctorCtrl($scope, $firebaseObject){
+//     const ref = firebase.database().ref('Contacts');
+//     $scope.contacts = $firebaseObject(ref);
+// }
+
 angular
     .module('app')
     .controller('addContactCtrl', addContactCtrl)
     .controller('homeCtrl', homeCtrl)
+   
+    
     
     

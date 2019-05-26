@@ -6,19 +6,23 @@
                                     <thead>
                                         <tr>
                                             <th>Ngày khám</th>
+                                            <th>Phụ trách khám </th>
                                             <th>Tên bệnh nhân </th>
                                             <th>Số điện thoại</th>
                                             <th>Giới tính</th>
                                             <th>Ghi chú thêm </th>
+                                            <th>Trạng thái </th>                                          
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr ng-repeat="contact in contacts">
                                            <th>{{contact.lichhen}}</th>
+                                           <th>{{contact.doctor}}</th>
                                            <th>{{contact.name}}</th>
                                            <th>{{contact.phone}}</th>
                                            <th>{{contact.sex}}</th>
                                            <th>{{contact.ghichu}}</th>
+                                           <th>{{contact.check}}</th>
                                        </tr>
                                 
                                        

@@ -20,12 +20,23 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
           }
         }
       })
+      .state('doctor', {
+        url: "/doctor",
+        views: {
+          'FormDoctor': {
+            templateUrl: "formDoctor.html",
+            controller: "homeCtrl"
+          }
+        }
+      })
+  
       
       ;
     //$urlRouterProvider.deferIntercept();
   }
-  
 ]);
+
+
 
 app.run(['$urlRouter', '$timeout', '$state',
   function ($urlRouter, $timeout, $state) {
