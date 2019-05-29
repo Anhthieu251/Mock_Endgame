@@ -20,6 +20,18 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
           }
         }
       })
+     
+    //$urlRouterProvider.deferIntercept();
+  }
+]);
+app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
+  function ($stateProvider, $urlRouterProvider, $locationProvider) {
+
+    //$locationProvider.html5Mode({enabled:false});
+    $urlRouterProvider.otherwise("/doctor")
+
+    // States
+    $stateProvider
       .state('doctor', {
         url: "/doctor",
         views: {
@@ -35,7 +47,6 @@ app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
     //$urlRouterProvider.deferIntercept();
   }
 ]);
-
 
 
 app.run(['$urlRouter', '$timeout', '$state',

@@ -11,16 +11,20 @@ function addContactCtrl($scope, $state, $firebaseObject) {
         });
     }
 };
- 
+
+//update
 
 
 
 
-
+// show data
 function homeCtrl($scope, $firebaseObject){
     const ref = firebase.database().ref('Contacts');
     $scope.contacts = $firebaseObject(ref);
+
 }
+
+
 // function doctorCtrl($scope, $firebaseObject){
 //     const ref = firebase.database().ref('Contacts');
 //     $scope.contacts = $firebaseObject(ref);

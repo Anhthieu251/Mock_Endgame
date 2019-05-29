@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Appointment</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="colorlib">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/linearicons.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
+  <link rel="stylesheet" href="../css/jquery-ui.css">				
+  <link rel="stylesheet" href="../css/nice-select.css">							
+  <link rel="stylesheet" href="../css/animate.min.css">
+  <link rel="stylesheet" href="../css/owl.carousel.css">			
+  <link rel="stylesheet" href="../css/jquery-ui.css">			
+  <link rel="stylesheet" href="../css/main.css">
+
+</head>
+<body>
+         
+	<header id="header">
+		<div class="header-top">
+				<div class="container">
+						<div class="row align-items-center">
+								<div class="col-lg-6 col-sm-6 col-4 header-top-left">
+										<a href=""><span class="lnr lnr-phone-handset"></span> <span class="text"><span class="text">18006969</span></span></a>
+										<a href=""><span class="lnr lnr-envelope"></span> <span class="text"><span class="text">support@medical.com</span></span></a>			
+								</div>
+								<div  class="col-lg-6 col-sm-6 col-8 header-top-right">
+											
+									<!-- <a id="btn_DangNhap_home" href="login.html" class="primary-btn text-uppercase">Đăng Nhập</a>
+									<a id="btn_DangKy_home" href="register.html" class="primary-btn text-uppercase">Đăng Ký</a> -->
+									<a id="btn_DangXuat_home"	href="login.html" class="primary-btn text-uppercase">Đăng Xuất</a>
+								</div>
+						</div>			  					
+				</div>
+	</div>
+	<div class="container main-menu">
+			<div class="row align-items-center justify-content-between d-flex">
+				<div id="logo">
+						<a href="home.html"><img src="../picture/logo.png" alt="" title="" /></a>
+				</div>
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+						<li><a href="#!/trangchu">Trang Chủ</a></li>
+						<li><a href="#!/doctor">Bác Sĩ</a></li>
+            <li><a href="#!/nurse">Y Tá</a></li>			          		     
+						<li><a href="">Bệnh Nhân</a></li>			    
+					</ul>
+				</nav><!-- #nav-menu-container -->		    		
+			</div>
+	</div>
+</header><!-- #header -->
+
+			<!-- start banner Area -->
+			<section class="banner-area relative" id="home">
+				<div class="overlay overlay-bg"></div>	
+				<div class="container">
+					<div class="row fullscreen d-flex align-items-center justify-content-center">
+						<div class="banner-content col-lg-8 col-md-12">
+							<h1>
+								Sức Khỏe Của Bạn
+                          </h1>
+                            <h1>Là Nhiệm Vụ Của Chúng Tôi</h1>							
+						</div>										
+					</div>
+				</div>					
+			</section>
+			<!-- End banner Area -->
+
+	
+
+
+
+      <div class="container">
+        <ng-view></ng-view>
+      </div>
+
+
+
+
+
+
+
+
+
+			<!-- Start facilities Area -->
+			<section class="facilities-area section-gap">
+				<div class="container">
+		            <div class="row d-flex justify-content-center">
+		                <div class="menu-content pb-70 col-lg-7">
+		                    <div class="title text-center">
+		                        <h1 class="mb-10">Điểm Nhấm Của Chúng Tôi</h1>
+		                    </div>
+		                </div>
+		            </div>
+					<div class="row">
+						<div class="col-lg-3 col-md-6">
+							<div class="single-facilities">
+								<span class="lnr lnr-rocket"></span>
+								<a href="#"><h4>Hoạt Động 24/7</h4></a>
+								<p>
+									Luôn hoạt động 24/7 nhằm phục vụ tối đa cho bệnh nhân, ứng phó kịp thời khi có tai nạn xảy.
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="single-facilities">
+								<span class="lnr lnr-heart"></span>
+								<a href="#"><h4>Phục Vụ 24/7</h4></a>
+								<p>
+									Phục vụ 24/7 đáp ứng tối đa yêu cầu của bệnh nhân, hỗ trợ khám và chữa trị chuyên nghiệp.
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="single-facilities">
+								<span class="lnr lnr-bug"></span>
+								<a href="#"><h4>Hiện Đại</h4></a>
+								<p>
+									Trang thiết bị y tế hiện đại, thuốc đặc trị chữa trị nhiều loại bệnh khác nhau. 
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="single-facilities">
+								<span class="lnr lnr-users"></span>
+								<a href="#"><h4>Y Tá Hot</h4></a>
+								<p>
+									Y tá dễ thương, xinh đẹp được tuyển chọn gắt gao nhằm hỗ trợ về tinh thần cho bệnh nhân.
+								</p>
+							</div>
+						</div>																		
+					</div>
+				</div>	
+			</section>
+			<!-- End facilities Area -->
+			
+
+			<!-- Start offered-service Area -->
+			<section class="offered-service-area section-gap">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-8 offered-left">
+							<h1 class="text-white">Những Dịch Vụ chính</h1>
+							
+							<div class="service-wrap row">
+								<div class="col-lg-6 col-md-6">
+									<div class="single-service">
+										<div class="thumb">
+											<img class="img-fluid" src="../picture/s1.jpg" alt="">		
+										</div>
+										<a href="#">
+											<h4 class="text-white">Cấp Cứu 24/7</h4>
+										</a>	
+										<p>
+											Đội ngũ xe cấp cứu luôn sẵn sàng hoạt động 24/7 khi có tai nạn xảy ra.
+										</p>
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<div class="single-service">
+										<div class="thumb">
+											<img class="img-fluid" src="../picture/s2.jpg" alt="">		
+										</div>
+										<a href="#">
+											<h4 class="text-white">Mạng Sống Trên Hết</h4>
+										</a>	
+										<p>
+											Chúng tôi luôn ưu tiên mạng sống trên hết, chữa trị hết sức có thể và hạn chế tối đa phải nó câu "Chúng tôi đã cố gắng hết sức" với người thân bệnh nhân.     
+										</p>
+									</div>
+								</div>								
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="offered-right relative">
+								<div class="overlay overlay-bg"></div>
+								<h3 class="relative text-white">Khoa</h3>
+								<ul class="relative dep-list">
+									<li><a href="#">Khoa Nội Tiết</a></li>
+									<li><a href="#">Khoa Cơ Xương Khớp</a></li>
+									<li><a href="#">Khoa Thần Kinh</a></li>
+									<li><a href="#">Khoa Mắt</a></li>
+									<li><a href="#">Khoa Hô Hấp</a></li>
+									<li><a href="#">Khoa Gây Mê - Hồi Sức</a></li>
+									<li><a href="#">Khoa Tim Mạch</a></li>
+								</ul>
+								<a class="viewall-btn" href="#">Xem Tất Cả Các Khoa</a>			
+							</div>	
+						</div>
+					</div>
+				</div>	
+      </section>
+      
+
+
+			<!-- End offered-service Area -->								
+      <!-- start footer Area -->		       
+			<footer class="footer-area section-gap">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-2  col-md-6">
+							<div class="single-footer-widget">
+								<h6>Hoạt Động</h6>
+								<ul class="footer-nav">
+									<li><a href="#">Trang Chủ</a></li>
+									<li><a href="#">Giới Thiệu</a></li>
+									<li><a href="#">Hoạt Động</a></li>
+									<li><a href="#">Bảng Giá</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-4  col-md-6">
+							<div class="single-footer-widget mail-chimp">
+								<h6 class="mb-20">Liên Hệ</h6>
+								<p>
+									Địa chỉ: 527 Sư Vạn Hạnh, Phường 12, Quận 10, Thành phố Hồ Chí Minh
+								</p>
+								<h3>18006969</h3>
+								<h3>18001003</h3>
+							</div>
+						</div>							
+						<div class="col-lg-6  col-md-12">
+							<div class="single-footer-widget newsletter">
+								<h6>Tin Tức</h6>
+								<p>Bạn có thể tin tưởng chúng tôi.</p>
+								<div id="mc_embed_signup">
+									<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
+
+										<div class="form-group row" style="width: 100%">
+											<div class="col-lg-8 col-md-12">
+												<input name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '" required="" type="email">
+											</div> 
+										
+											<div class="col-lg-4 col-md-12">
+												<button class="nw-btn primary-btn circle">Subscribe<span class="lnr lnr-arrow-right"></span></button>
+											</div> 
+										</div>		
+										<div class="info"></div>
+									</form>
+								</div>		
+							</div>
+						</div>					
+					</div>
+
+					<div class="row footer-bottom d-flex justify-content-between">
+						<p class="col-lg-8 col-sm-12 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved. 
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+						<div class="col-lg-4 col-sm-12 footer-social">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+							<a href="#"><i class="fa fa-behance"></i></a>
+						</div>					
+					</div>
+				</div>
+			</footer>
+   
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+              <script src="../js/vendor/jquery-2.2.4.min.js"></script>
+              <script src="../js/popper.min.js"></script>
+              <script src="../js/vendor/bootstrap.min.js"></script>			
+               <script src="../js/jquery-ui.js"></script>					
+                <script src="../js/easing.min.js"></script>			
+              <script src="../js/hoverIntent.js"></script>
+              <script src="../js/superfish.min.js"></script>	
+              <script src="../js/jquery.ajaxchimp.min.js"></script>
+              <script src="../js/jquery.magnific-popup.min.js"></script>	
+                <script src="../js/jquery.tabs.min.js"></script>						
+              <script src="../js/jquery.nice-select.min.js"></script>	
+              <script src="../js/owl.carousel.min.js"></script>									
+              <script src="../js/mail-script.js"></script>	
+              <script src="../js/main.js"></script>	
+              <script src="../js/home.js"></script>
+
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/firebase/firebase.js"></script>
+<script src="bower_components/angularfire/angularfire.js"></script>
+<script src="app.js"></script>
+
+<script src="page2/page2.js"></script>
+<script src="page3/page3.js"></script>
+<script src="trangchu/trangchu.js"></script>
+<script src="nurse/nurse.js"></script>
+<script src="doctor/doctor.js"></script>
+<script src="detail/detail.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-datatables/0.6.2/angular-datatables.min.js"></script>
+
+
+<script>
+
+  var config = {
+        apiKey: "AIzaSyBGdT-EETtewn4ng-SojYCs8SH5oOiJiCk",
+        authDomain: "web-doctor-c3e36.firebaseapp.com",
+        databaseURL: "https://web-doctor-c3e36.firebaseio.com",
+        projectId: "web-doctor-c3e36",
+        storageBucket: "web-doctor-c3e36.appspot.com",
+        messagingSenderId: "1035233431360",
+        appId: "1:1035233431360:web:ba760aec9e2990ca"
+  };
+
+  firebase.initializeApp(config);
+</script>
+</body>
+</html>
